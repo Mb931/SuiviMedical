@@ -32,6 +32,7 @@ public class CtrlPatient
             rs = ps.executeQuery();
             while (rs.next()) {
                 Patient patient = new Patient(rs.getInt("idPatient"),rs.getString("nomPatient"));
+                lesPatients.add(patient);
             }
             ps.close();
             rs.close();

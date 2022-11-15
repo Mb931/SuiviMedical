@@ -30,6 +30,7 @@ public class CtrlMedecin
             rs = ps.executeQuery();
             while (rs.next()) {
                  Medecin medecin = new Medecin(rs.getInt("idMedecin"),rs.getString("nomMedecin"));
+                 lesMedecins.add(medecin);
             }
             ps.close();
             rs.close();

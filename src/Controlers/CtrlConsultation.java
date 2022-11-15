@@ -29,6 +29,7 @@ public class CtrlConsultation
             rs= ps.executeQuery();
             while (rs.next()){
                 Consultation consultation = new Consultation(rs.getInt("consultation.idConsult"), rs.getString("consultation.dateConsult"), rs.getString("patient.nomPatient"), rs.getString("medecin.nomMedecin"),rs.getDouble("montant") );
+                lesConsultations.add(consultation);
             }
             ps.close();
             rs.close();
